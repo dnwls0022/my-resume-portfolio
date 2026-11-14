@@ -8,7 +8,6 @@ import {
 
 export default function ResumePage() {
   return (
-    // 1. 전체 배경을 흰색(bg-white), 글자색을 진한 회색(text-slate-800)으로 변경
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-purple-600 selection:text-white">
       
       {/* 상단 내비게이션 바 */}
@@ -104,7 +103,7 @@ export default function ResumePage() {
           <span className="text-purple-600">#</span> Skills & Technologies
         </h2>
         <p className="text-sm text-slate-500 mb-8">
-          * 기술 수준 정의: [① 입문: 개념 이해] [② 기초/협업: 연동 및 독립 구현] [③ 활용: 구조 설계 및 트러블슈팅]
+          * 기술 숙련도 수준: [상: 구조 설계 및 트러블슈팅 가능]
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -116,15 +115,15 @@ export default function ResumePage() {
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>더존 iCUBE ERP (급여·근태·물류)</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>Excel 고급 함수 (XLOOKUP, VLOOKUP, 매크로)</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>2단계 크로스체크 데이터 검증 프로세스</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
             </div>
           </div>
@@ -137,15 +136,15 @@ export default function ResumePage() {
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>Java & Spring Boot (객체지향 설계)</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>MariaDB / MySQL (HeidiSQL 쿼리 최적화)</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>REST API 연동 및 예외 처리 로직</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
             </div>
           </div>
@@ -158,15 +157,15 @@ export default function ResumePage() {
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>React / JavaScript (ES6+) / TypeScript</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>HTML / CSS / Tailwind CSS</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>사용자 중심 UI/UX 구현 및 발표</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
             </div>
           </div>
@@ -179,15 +178,15 @@ export default function ResumePage() {
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>Git & GitHub (<code className="text-xs">dnwls0022</code>) 버전 관리</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>VS Code / DBeaver / HeidiSQL</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>Vercel / Render 클라우드 배포</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">활용 ③</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
               </div>
             </div>
           </div>
