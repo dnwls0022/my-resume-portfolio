@@ -280,7 +280,7 @@ export default function ResumePage() {
               {/* object-cover와 object-top을 적용하여 상단 헤더가 짤리지 않고 좌우로 화면을 꽉 채움 */}
               <div className="w-full h-48 bg-slate-100 overflow-hidden border-b border-slate-200">
                 <img 
-                  src="/ERP로고.png" 
+                  src="/ERPlogo.png" 
                   alt="부산 물류 ERP 화면 썸네일" 
                   className="w-full h-full object-cover object-top hover:scale-105 transition duration-300"
                 />
@@ -317,7 +317,7 @@ export default function ResumePage() {
               {/* object-cover와 object-top을 적용하여 상단 보라색 헤더가 짤리지 않고 카드를 가득 채움 */}
               <div className="w-full h-48 bg-slate-900 overflow-hidden border-b border-slate-200">
                 <img 
-                  src="/커넥티드엠.png" 
+                  src="/connected m.png" 
                   alt="Connected_M 화면 썸네일" 
                   className="w-full h-full object-cover object-top hover:scale-105 transition duration-300"
                 />
