@@ -3,7 +3,7 @@
 import React from 'react';
 import { 
   Server, Layout, 
-  ExternalLink, GitBranch, Mail, Terminal, Database, Award, Briefcase, GraduationCap
+  ExternalLink, GitBranch, Mail, Terminal, Database, Award, Briefcase, GraduationCap, Code
 } from 'lucide-react';
 
 export default function ResumePage() {
@@ -114,8 +114,8 @@ export default function ResumePage() {
             </div>
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
-                <span>더존 iCUBE ERP (급여·근태·물류)</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
+                <span>더존 iCUBE ERP (급여·시스템관리·물류)</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">중</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>Excel 고급 함수 (XLOOKUP, VLOOKUP, 매크로)</span>
@@ -140,7 +140,7 @@ export default function ResumePage() {
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>MariaDB / MySQL (HeidiSQL 쿼리 최적화)</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">중</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>REST API 연동 및 예외 처리 로직</span>
@@ -157,7 +157,7 @@ export default function ResumePage() {
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>React / JavaScript (ES6+) / TypeScript</span>
-                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">상</span>
+                <span className="text-purple-700 font-semibold text-xs bg-purple-100 px-2 py-1 rounded">중상</span>
               </div>
               <div className="flex justify-between items-center text-sm border-b border-slate-200 pb-2">
                 <span>HTML / CSS / Tailwind CSS</span>
@@ -273,59 +273,108 @@ export default function ResumePage() {
         </h2>
         <p className="text-sm text-slate-500 mb-8">실무 역량과 트러블슈팅 경험을 담은 주요 프로젝트 포트폴리오입니다.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-purple-300 transition shadow-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {/* 부산 물류 ERP 프로젝트 카드 */}
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-purple-300 transition shadow-sm">
             <div>
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-bold text-slate-900">부산 물류 ERP (Busan Logistics ERP)</h3>
-                <span className="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full font-mono">개인 프로젝트</span>
+              {/* object-cover와 object-top을 적용하여 상단 헤더가 짤리지 않고 좌우로 화면을 꽉 채움 */}
+              <div className="w-full h-48 bg-slate-100 overflow-hidden border-b border-slate-200">
+                <img 
+                  src="/ERP로고.png" 
+                  alt="부산 물류 ERP 화면 썸네일" 
+                  className="w-full h-full object-cover object-top hover:scale-105 transition duration-300"
+                />
               </div>
-              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                기획·설계부터 Vercel/Render 클라우드 배포까지 전 과정 단독 수행. 안전재고 자동 알림, 입출고 상태 파이프라인, 배송 일정 캘린더 및 Google SMTP 기반 회원 인증·임시 비밀번호 발급 API 구현.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">React</span>
-                <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">Spring Boot</span>
-                <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">MariaDB</span>
-                <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">SMTP API</span>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl font-bold text-slate-900">부산 물류 ERP (Busan Logistics ERP)</h3>
+                  <span className="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full font-mono">개인 프로젝트</span>
+                </div>
+                <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                  기획·설계부터 Vercel/Render 클라우드 배포까지 전 과정 단독 수행. 안전재고 자동 알림, 입출고 상태 파이프라인, 배송 일정 캘린더 및 Google SMTP 기반 회원 인증·임시 비밀번호 발급 API 구현.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">React</span>
+                  <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">Spring Boot</span>
+                  <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">MariaDB</span>
+                  <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">SMTP API</span>
+                </div>
               </div>
             </div>
-            <div className="flex gap-4 pt-4 border-t border-slate-200">
+            <div className="flex gap-4 p-6 pt-4 border-t border-slate-200 bg-white/50">
               <a href="https://busan-logistics-erp-rbq5.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-600 hover:text-purple-700 flex items-center gap-1 font-medium">
                 <ExternalLink className="w-4 h-4" /> Live Demo ↗
               </a>
-              <a href="https://github.com/dnwls0022" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-slate-700 flex items-center gap-1 font-medium">
+              <a href="https://github.com/dnwls0022/busan-logistics-erp" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-slate-700 flex items-center gap-1 font-medium">
                 <GitBranch className="w-4 h-4" /> GitHub ↗
               </a>
             </div>
           </div>
 
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-purple-300 transition shadow-sm">
+          {/* Connected_M 프로젝트 카드 */}
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-purple-300 transition shadow-sm">
             <div>
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-bold text-slate-900">Connected_M (AI 영화 추천 플랫폼)</h3>
-                <span className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-mono">팀 프로젝트</span>
+              {/* object-cover와 object-top을 적용하여 상단 보라색 헤더가 짤리지 않고 카드를 가득 채움 */}
+              <div className="w-full h-48 bg-slate-900 overflow-hidden border-b border-slate-200">
+                <img 
+                  src="/커넥티드엠.png" 
+                  alt="Connected_M 화면 썸네일" 
+                  className="w-full h-full object-cover object-top hover:scale-105 transition duration-300"
+                />
               </div>
-              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                프론트엔드 UI 구현 및 최종 기술 발표 담당. HeidiSQL을 통한 MariaDB 데이터 정합성 검증 및 회원탈퇴/HTTP 500 에러 트러블슈팅 주도. 사용자 편의성 극대화로 호평 획득.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">React</span>
-                <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">Spring Boot</span>
-                <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">MariaDB</span>
-                <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">AI API</span>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl font-bold text-slate-900">Connected_M (AI 영화 추천 플랫폼)</h3>
+                  <span className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-mono">팀 프로젝트</span>
+                </div>
+                <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                  프론트엔드 UI 구현 및 최종 기술 발표 담당. HeidiSQL을 통한 MariaDB 데이터 정합성 검증 및 회원탈퇴/HTTP 500 에러 트러블슈팅 주도. 사용자 편의성 극대화로 호평 획득.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">React</span>
+                  <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">Spring Boot</span>
+                  <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">MariaDB</span>
+                  <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">AI API</span>
+                </div>
               </div>
             </div>
-            <div className="flex gap-4 pt-4 border-t border-slate-200">
+            <div className="flex gap-4 p-6 pt-4 border-t border-slate-200 bg-white/50">
               <a href="https://connected-m.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-600 hover:text-purple-700 flex items-center gap-1 font-medium">
                 <ExternalLink className="w-4 h-4" /> Live Demo ↗
               </a>
-              <a href="https://github.com/dnwls0022" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-slate-700 flex items-center gap-1 font-medium">
+              <a href="https://github.com/dnwls0022/Connected_M" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-slate-700 flex items-center gap-1 font-medium">
                 <GitBranch className="w-4 h-4" /> GitHub ↗
               </a>
             </div>
           </div>
         </div>
+
+        {/* 미니 프로젝트 포트폴리오 허브 섹션 */}
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm">
+          <div className="flex items-center gap-3 mb-4">
+            <Code className="w-6 h-6 text-purple-600" />
+            <h3 className="text-xl font-bold text-slate-900">Toy & Mini Projects (미니 프로젝트 포트폴리오 허브)</h3>
+            <span className="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full font-mono ml-auto">GitHub Pages</span>
+          </div>
+          <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+            프론트엔드 인터랙션과 실용적인 웹 기능을 직접 기획하고 구현해 본 토이 프로젝트 모음집입니다. 다양한 기술 스택에 대한 호기심과 빠른 학습 능력을 바탕으로 꾸준히 개발 역량을 확장하고 있습니다.
+          </p>
+          <div className="flex flex-wrap gap-2 mb-6">
+            <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">JavaScript</span>
+            <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">Responsive Web</span>
+            <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">GitHub Pages</span>
+            <span className="bg-white border border-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded">UI/UX Interaction</span>
+          </div>
+          <div className="flex gap-4 pt-4 border-t border-slate-200">
+            <a href="https://dnwls0022.github.io/mini-project-portfolio/" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-600 hover:text-purple-700 flex items-center gap-1 font-medium">
+              <ExternalLink className="w-4 h-4" /> 미니 프로젝트 허브 바로가기 ↗
+            </a>
+            <a href="https://github.com/dnwls0022/mini-project-portfolio" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-slate-700 flex items-center gap-1 font-medium">
+              <GitBranch className="w-4 h-4" /> GitHub 저장소 ↗
+            </a>
+          </div>
+        </div>
+
       </section>
 
       {/* 연락처 및 푸터 */}
